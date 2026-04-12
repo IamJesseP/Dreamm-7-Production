@@ -56,7 +56,7 @@
                 </div>
                 <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-500">
                     <a href="#foundation" class="hover:text-blue-900 transition-colors">Foundation</a>
-                    <a href="#frontline" class="hover:text-blue-900 transition-colors">Frontline</a>
+                    <a href="#frontline" class="hover:text-blue-900 transition-colors">Firstline Tx</a>
                     <a href="#timeline" class="hover:text-blue-900 transition-colors">Timeline</a>
                     <a href="#breakthrough" class="hover:text-blue-900 transition-colors">Trial Data</a>
                     <a href="#conclusion" class="bg-blue-900 text-white px-3 py-1 rounded-full hover:bg-blue-800 transition-all">Verdict</a>
@@ -103,7 +103,7 @@
         <!-- 2. Frontline Review & MoA Contrast -->
         <section id="frontline" class="space-y-8">
             <div class="max-w-3xl">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Frontline Standards & Mechanisms</h2>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Firstline Treatment & Mechanisms</h2>
                 <p class="text-gray-600 leading-relaxed">
                     Induction therapy for newly diagnosed patients utilizes distinct biological pathways. Below is the critical difference between the intracellular proteasome targeting and extracellular CD38 targeting.
                 </p>
@@ -268,7 +268,7 @@
                 </div>
             </div>
             <div class="bg-white rounded-3xl clinical-shadow border border-gray-100 p-8">
-                <div class="flex bg-gray-100 p-1 rounded-xl">
+                <div class="flex bg-gray-100 p-1 rounded-xl gap-3">
                     <button onclick="switchTab('efficacy')" id="tab-efficacy" class="px-6 py-2 text-sm font-bold rounded-lg transition-all tab-active">Efficacy</button>
                     <button onclick="switchTab('safety')" id="tab-safety" class="px-6 py-2 text-sm font-bold rounded-lg transition-all text-gray-500">Safety</button>
                 </div>
@@ -419,23 +419,27 @@
         }
 
         function initScrollSpy() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('a[href^="#"]');
+            const sections = Array.from(document.querySelectorAll('section[id]'));
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('nav-active');
-                            if (link.getAttribute('href') === '#' + entry.target.id) {
-                                link.classList.add('nav-active');
-                            }
-                        });
+            function updateActiveLink() {
+                const offset = 96;
+                let currentId = sections[0]?.id;
+
+                sections.forEach(section => {
+                    const top = section.getBoundingClientRect().top;
+                    if (top <= offset) {
+                        currentId = section.id;
                     }
                 });
-            }, { threshold: 0.3, rootMargin: '-80px 0px -66% 0px' });
 
-            sections.forEach(section => observer.observe(section));
+                navLinks.forEach(link => {
+                    link.classList.toggle('nav-active', link.getAttribute('href') === '#' + currentId);
+                });
+            }
+
+            updateActiveLink();
+            window.addEventListener('scroll', updateActiveLink, { passive: true });
         }
 
         window.onload = function() {
