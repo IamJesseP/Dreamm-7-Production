@@ -230,7 +230,46 @@
                     <button onclick="switchTab('safety')" id="tab-safety" class="px-6 py-2 text-sm font-bold rounded-lg transition-all text-gray-500">Safety</button>
                 </div>
             </div>
-
+            <div class="bg-white rounded-2xl p-8 border border-gray-100 clinical-shadow">
+                <h4 class="text-lg font-bold text-gray-900 mb-6">Clinical Endpoint Definitions</h4>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-blue-50/40 p-6 rounded-xl border border-blue-100">
+                        <span class="primer-tag mb-3 inline-block">PFS</span>
+                        <h5 class="font-bold text-gray-900 text-sm mb-2">Progression-Free Survival</h5>
+                        <p class="text-xs text-gray-700 leading-relaxed mb-2"><strong>Definition:</strong> Time from starting treatment until disease progresses or patient dies.</p>
+                        <p class="text-xs text-gray-600 italic bg-white/50 p-2 rounded">📌 How long can we keep the cancer from getting worse?</p>
+                    </div>
+                    <div class="bg-orange-50/40 p-6 rounded-xl border border-orange-100">
+                        <span class="primer-tag mb-3 inline-block" style="background: #FEF3C7; color: #92400E;">ORR</span>
+                        <h5 class="font-bold text-gray-900 text-sm mb-2">Overall Response Rate</h5>
+                        <p class="text-xs text-gray-700 leading-relaxed mb-2"><strong>Definition:</strong> % of patients who achieve ≥ Partial Response (PR).</p>
+                        <p class="text-xs text-gray-700 mb-2"><strong>Includes:</strong></p>
+                        <ul class="text-xs text-gray-600 list-disc list-inside mb-2">
+                            <li>Partial Response (PR)</li>
+                            <li>Complete Response (CR)</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 italic bg-white/50 p-2 rounded">📌 How many patients actually respond to the drug?</p>
+                    </div>
+                    <div class="bg-green-50/40 p-6 rounded-xl border border-green-100">
+                        <span class="primer-tag mb-3 inline-block" style="background: #ECFDF5; color: #065F46;">CR</span>
+                        <h5 class="font-bold text-gray-900 text-sm mb-2">Complete Response</h5>
+                        <p class="text-xs text-gray-700 leading-relaxed mb-2"><strong>Definition:</strong> No detectable disease using standard clinical tests.</p>
+                        <p class="text-xs text-gray-700 mb-2"><strong>In multiple myeloma:</strong></p>
+                        <ul class="text-xs text-gray-600 list-disc list-inside mb-2">
+                            <li>No M-protein in blood/urine</li>
+                            <li>Normal bone marrow (no clonal plasma cells)</li>
+                        </ul>
+                        <p class="text-xs text-gray-600 italic bg-white/50 p-2 rounded">📌 We can't see the cancer anymore with routine testing</p>
+                    </div>
+                    <div class="bg-purple-50/40 p-6 rounded-xl border border-purple-100">
+                        <span class="primer-tag mb-3 inline-block" style="background: #F3E8FF; color: #6B21A8;">MRD-</span>
+                        <h5 class="font-bold text-gray-900 text-sm mb-2">Minimal Residual Disease Negative</h5>
+                        <p class="text-xs text-gray-700 leading-relaxed mb-2"><strong>Definition:</strong> No detectable cancer cells using very sensitive testing (flow cytometry or sequencing).</p>
+                        <p class="text-xs text-gray-700 mb-2"><strong>Sensitivity:</strong> Detects down to 1 cancer cell in 100,000 cells (10⁻⁵).</p>
+                        <p class="text-xs text-gray-600 italic bg-white/50 p-2 rounded">📌 Even microscopic disease is gone</p>
+                    </div>
+                </div>
+            </div>
             <div class="bg-white rounded-3xl clinical-shadow border border-gray-100 p-8">
                 <div id="view-efficacy" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="space-y-6">
