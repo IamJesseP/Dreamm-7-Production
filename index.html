@@ -13,10 +13,11 @@
          2. Frontline Standards: Mechanism contrast (Bortezomib vs Daratumumab).
          3. Defining RRMM: The clinical bridge.
          4. The Journey: Vertical timeline of RRMM standards (1960-2024).
-         5. Belantamab Spotlight: ADC mechanism and BCMA targeting.
-         6. Breakthrough: Trial Evidence Dashboard (PFS, Depth, Safety).
-         7. Conclusion: Final verdict and multi-dimensional scorecard.
-         8. Final Audit Sources: Comprehensive citation of all clinical data points.
+         5. BCMA Targeting Therapies: Bispecifics, CAR-T, ADCs.
+         6. Belantamab Spotlight: ADC mechanism and BCMA targeting.
+         7. Breakthrough: Trial Evidence Dashboard (PFS, Depth, Safety).
+         8. Conclusion: Final verdict and multi-dimensional scorecard.
+         9. Final Audit Sources: Comprehensive citation of all clinical data points.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
@@ -59,6 +60,7 @@
                     <a href="#foundation" class="hover:text-blue-900 transition-colors">Foundation</a>
                     <a href="#frontline" class="hover:text-blue-900 transition-colors">Firstline Tx</a>
                     <a href="#timeline" class="hover:text-blue-900 transition-colors">Timeline</a>
+                    <a href="#bcma" class="hover:text-blue-900 transition-colors">BCMA</a>
                     <a href="#breakthrough" class="hover:text-blue-900 transition-colors">Trial Data</a>
                     <a href="#conclusion" class="bg-blue-900 text-white px-3 py-1 rounded-full hover:bg-blue-800 transition-all">Verdict</a>
                 </div>
@@ -158,7 +160,7 @@
             <div class="bg-white rounded-3xl p-8 border border-gray-100 clinical-shadow">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="space-y-4">
-                        <div class="contrast-header">TRIPLET: VRd (The "Workhorse")</div>
+                        <div class="contrast-header">TRIPLET: VRd</div>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             For nearly a decade, VRd has been the global gold standard for induction, using a three-pronged attack to hit plasma cells from different biological angles.
                         </p>
@@ -181,7 +183,7 @@
                         </div>
                     </div>
                     <div class="space-y-4">
-                        <div class="contrast-header">QUADRUPLET: Dara-VRd (The "New Benchmark")</div>
+                        <div class="contrast-header">QUADRUPLET: Dara-VRd</div>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             The "Quad" pathway takes the VRd backbone and adds a monoclonal antibody to put a "target" on cancer cells, recruiting the immune system.
                         </p>
@@ -197,6 +199,8 @@
                     </div>
                 </div>
             </div>
+
+            <p class="text-xs text-gray-600 mt-4"><strong>Note:</strong> Autologous Stem Cell Transplant (ASCT) is not a first-line treatment but consolidation therapy to deepen remission achieved by initial drugs like VRd or Dara-VRd.</p>
 
             <div class="highlight-card p-8 rounded-3xl clinical-shadow mt-8">
                 <h3 class="text-xl font-bold text-blue-900 mb-2 flex items-center gap-2">Defining RRMM</h3>
@@ -254,7 +258,56 @@
             </div>
         </section>
 
-        <!-- 4. Belantamab Spotlight -->
+        <!-- BCMA Targeting Therapies -->
+        <section id="bcma" class="space-y-8">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">BCMA Targeting Therapies</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    BCMA (B-cell maturation antigen) is a protein highly expressed on multiple myeloma cells, making it a prime target for novel therapies. Unlike CD38, which is lost in relapsed patients, BCMA remains consistently expressed.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 border border-gray-100 clinical-shadow">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Three Main Approaches</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                        <h4 class="font-bold text-blue-900 mb-2">Bispecific Antibodies</h4>
+                        <p class="text-xs text-gray-600">Bind BCMA on cancer cells and T-cells simultaneously, redirecting immune attack.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                        <h4 class="font-bold text-green-900 mb-2">CAR-T Cells</h4>
+                        <p class="text-xs text-gray-600">Engineered T-cells with BCMA-targeting receptors for potent, long-lasting responses.</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl border border-orange-100">
+                        <h4 class="font-bold text-orange-900 mb-2">Antibody-Drug Conjugates (ADCs)</h4>
+                        <p class="text-xs text-gray-600">Antibodies deliver cytotoxic drugs directly to BCMA-expressing cells.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-2xl clinical-shadow border border-gray-100">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center text-red-600 font-bold text-xs">⚠</span>
+                        Manufacturing Gap
+                    </h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        CAR-T is the most potent BCMA therapy, but manufacturing takes 6 weeks. For patients with aggressive disease, this delay may not be feasible. Bispecifics and ADCs offer faster "speed to treatment" in these scenarios.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl clinical-shadow border border-gray-100">
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 font-bold text-xs">⚖</span>
+                        Toxicity Trade-off
+                    </h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Frail patients or those with weak heart/lungs may not tolerate Cytokine Release Syndrome (CRS) from CAR-T or Bispecifics. ADCs like Belantamab provide a safer profile, trading CRS risk for manageable eye toxicity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Belantamab Spotlight -->
         <section id="belantamab" class="space-y-8">
             <div class="bg-white p-8 rounded-3xl border border-gray-100 clinical-shadow adc-glow grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
@@ -278,7 +331,7 @@
             </div>
         </section>
 
-        <!-- 5. Trial Evidence Dashboard -->
+        <!-- 6. Trial Evidence Dashboard -->
         <section id="breakthrough" class="space-y-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <h2 class="text-3xl font-extrabold text-gray-900">Trial Evidence Analysis</h2>
@@ -384,7 +437,7 @@
             </div>
         </section>
 
-        <!-- 6. Conclusion -->
+        <!-- 7. Conclusion -->
         <section id="conclusion" class="space-y-10">
             <div class="text-center max-w-2xl mx-auto">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-4">The Clinical Verdict</h2>
@@ -402,12 +455,14 @@
                 </div>
             </div>
             <div class="verdict-gradient rounded-3xl p-10 text-white text-center shadow-2xl">
-                <h3 class="text-2xl font-extrabold mb-2">The New Benchmark in Early Relapse RRMM.</h3>
-                <p class="text-sm text-blue-100 italic">Effective management of ocular toxicity unlocks unprecedented disease control.</p>
+                <h3 class="text-2xl font-extrabold mb-4">Looking to the Future: DREAMM-8</h3>
+                <p class="text-sm text-blue-100 mb-4">The Phase 3 DREAMM-8 trial compared Belantamab triplets against potent standards (DVd/PVd) for Lenalidomide-refractory patients.</p>
+                <p class="text-sm text-blue-100 mb-4"><strong>Backbone Agnostic:</strong> Superior outcomes whether paired with Bortezomib or Pomalidomide vs previous gold standards.</p>
+                <p class="text-sm text-blue-100 italic">A versatile "Swiss Army Knife" for community oncologists - high-potency BCMA without inpatient CAR-T/Bispecific monitoring.</p>
             </div>
         </section>
 
-        <!-- 7. FINAL AUDIT SOURCES SECTION -->
+        <!-- 8. FINAL AUDIT SOURCES SECTION -->
         <section id="sources" class="space-y-8 bg-slate-50 p-10 rounded-3xl border border-slate-200">
             <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <span>&#128218;</span> Sources & Clinical References
@@ -420,6 +475,9 @@
                     </div>
                     <div class="source-item">
                         <strong>GSK DREAMM-7 press release:</strong> Grade 3/4 ocular AEs in 34% of BVd patients with 98% resolution and median time to resolution of 22 days. <a href="https://www.gsk.com/en-gb/media/press-releases/dreamm-7-phase-iii-trial-shows-pfs-improvement-and-strong-os-trend-for-blenrep-combo-versus-soc-combo-in-multiple-myeloma/" target="_blank" rel="noreferrer">GSK press release</a>.
+                    </div>
+                    <div class="source-item">
+                        <strong>DREAMM-8 Trial (Phase 3):</strong> Belantamab triplets vs DVd/PVd in Lenalidomide-refractory RRMM, demonstrating backbone agnostic superiority. <a href="https://www.gsk.com" target="_blank" rel="noreferrer">GSK DREAMM-8</a>.
                     </div>
                     <div class="source-item">
                         <strong>CASTOR Trial (DVd standard):</strong> Palumbo A, et al. "Daratumumab, Bortezomib, and Dexamethasone for Multiple Myeloma." <em>NEJM</em> 2016. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1606038" target="_blank" rel="noreferrer">NEJM</a>.
